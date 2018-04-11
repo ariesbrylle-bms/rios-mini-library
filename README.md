@@ -14,7 +14,7 @@ Open the file under the <i>folder-name/assets/js/app-constant.js</i> and change 
 <br>Open your xampp and start the Apache Web Server and MySql Database
 
 ### Running the System
-Type in your browser this link http://localhost[:port]/folder-name
+Type on your browser this link http://localhost[:port]/folder-name
 
 ### Technology Used
 * AngularJS 1
