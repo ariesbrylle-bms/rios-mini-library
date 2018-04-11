@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This is the login page for a simple Library Application.">
+    <meta name="author" content="Aries Brylle Ventura">
+    <link rel="icon" href="./assets/img/favicon.ico">
+
+    <title>Login</title>
+
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/signin.css" rel="stylesheet">
+    <link href="./assets/css/angular-ui-notification.min.css" rel="stylesheet">
+
+  </head>
+
+  <body class="text-center" ng-app="loginApp">
+    <form class="form-signin form-horizontal" id="login_form" ng-controller="loginController" ng-submit="submitForm()">
+      <a href="./index.html">
+        <img class="mb-4" src="./assets/img/favicon.ico" alt="" width="72" height="72">
+      </a>
+      <label class="sr-only">Username</label>
+      <input type="text" id="username" name="username" ng-model="login.username" class="form-control" placeholder="Username" required autofocus>
+      <label class="sr-only">Password</label>
+      <input type="password" id="password" name="password" ng-model="login.password" class="form-control" placeholder="Password" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+  </body>
+
+  <!-- footer -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./assets/js/jquery-3.2.1.slim.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.9/angular-sanitize.js"></script>
+  <script src="./assets/js/angular-ui-notification.min.js"></script>
+  <script src="./assets/js/app-constant.js"></script>
+  <script src="./assets/js/cookies.js"></script>
+  <script src="./assets/js/cookieWriter.js"></script>
+  <script src="./assets/js/login.js"></script>
+</html>

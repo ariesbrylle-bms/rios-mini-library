@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This is the admin side of a simple Library Application.">
+    <meta name="author" content="Aries Brylle Ventura">
+    <link rel="icon" href="./assets/img/favicon.ico">
+    <title>Library</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/select2.min.css" rel="stylesheet" />
+    <link href="./assets/css/bootstrap-tagsinput.css" rel="stylesheet">
+    <link href="./assets/css/angular-ui-notification.min.css" rel="stylesheet">
+    <link href="./assets/css/datatables.min.css" rel="stylesheet">
+    <link href="./assets/css/angular-datatables.min.css" rel="stylesheet">
+
+  </head>
+
+  <body ng-app="myApp">
+    <nav class="navbar navbar-inverse" ng-controller="navBarController">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">FFUF Library Application</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="nav-item" ng-class="{ active: isActive('/') } ">
+            <a class="nav-link" href="#">
+                <span class="glyphicon glyphicon-home"></span>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item" ng-class="{ active: isActive('/book-information') }">
+              <a class="nav-link" href="#!book-information">
+                <span class="glyphicon glyphicon-book"></span>
+                Books Information
+              </a>
+            </li>
+            <li class="nav-item" ng-class="{ active: isActive('/borrow-book') }">
+              <a class="nav-link" href="#!borrow-book">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                Borrow Books
+              </a>
+            </li>
+            <li class="nav-item" ng-class="{ active: isActive('/return-book') }">
+              <a class="nav-link" href="#!return-book">
+                <span class="glyphicon glyphicon-share-alt"></span>
+                Return Books
+              </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href=""><span class="glyphicon glyphicon-user"></span> {{ username }}</a></li>
+          <li><a href="#!change_password"><span class="glyphicon glyphicon-cog"></span> Change Password</a></li>
+          <li><a href="./login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div ng-view>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="./assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/bootstrap-tagsinput.min.js"></script>
+    <script src="./assets/js/select2.min.js"></script>
+    <script src="./assets/js/datatables.min.js"></script>
+    <script src="./assets/js/bootstrapValidator.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.9/angular-sanitize.js"></script>
+    <script src="./assets/js/angular-datatables.min.js"></script>
+    <script src="./assets/js/angular-ui-notification.min.js"></script>
+    <script src="./assets/js/cookies.js"></script>
+    <script src="./assets/js/cookieWriter.js"></script>
+    <script src="./assets/js/app-constant.js"></script>
+    <script src="./assets/js/app-module.js"></script>
+    <script src="./assets/js/app-route.js"></script>
+    <script src="./assets/js/app-controller.js"></script>
+  </body>
+</html>

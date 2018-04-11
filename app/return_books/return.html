@@ -1,0 +1,57 @@
+<div ng-controller="return-book">
+  <h4>Return Book</h4>
+   <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-info">
+        <div class="panel-heading">List of Borrowed Books</div>
+        <div class="panel-body">
+           <table datatable="ng" class="table" dt-options="vm.dtOptions" dt-instance="vm.dtInstance"  width="100%" dt-column-defs="vm.dtColumnDefs">
+              <thead>
+              <tr>
+                  <td style="width:40%">Title</td>
+                  <td style="width:25%">Borrowed By</td>
+                  <td style="width:20%">Date Borrowed</td>
+                  <td style="width:15%">Action</td>
+                </tr>
+              </thead>
+              <tbody>
+         
+                  <tr ng-repeat="x in book_data">
+                  <td>{{ x.title }}</td>
+                  <td>{{ x.borrower }}</td>
+                  <td>{{ x.date_borrowed }}</td>
+                  <td><div class="btn-group">
+                    <button type="button" ng-click="return_book(x.id, x.borrow_id)" class="btn btn-success">Return Book</button>
+                    </div></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+
+      <div class="panel panel-info">
+        <div class="panel-heading">History of Borrowed Books</div>
+        <div class="panel-body">
+           <table datatable="ng" class="table" dt-options="vm.dtOptions" dt-instance="vm.dtInstance"  width="100%" dt-column-defs="vm.dtColumnDefs">
+              <thead>
+              <tr>
+                  <td style="width:40%">Title</td>
+                  <td style="width:25%">Borrowed By</td>
+                  <td style="width:20%">Date Borrowed</td>
+                  <td style="width:20%">Date Returned</td>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr ng-repeat="x in book_data_history">
+                  <td>{{ x.title }}</td>
+                  <td>{{ x.borrower }}</td>
+                  <td>{{ x.date_borrowed }}</td>
+                  <td>{{ x.date_returned }}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<style type="text/css">
+  .visual{
+    width: 80px;
+    height: 80px;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    font-size: 70px;
+    line-height: 35px;
+    opacity: inherit;
+  }
+
+  .card{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: right;
+    font-size: 25px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    margin-bottom: 0px;
+    font-weight: 300;
+    color: white;
+  }
+</style>
+<div ng-controller="dashboard">
+  <h4>Dashboard</h4>
+  <div class="row">
+    <div class="col-sm-4">
+        <div class="card" style="background-color: #c10b0bd1;">
+          <div class="card-body">
+          <div class="visual">
+            <span class="glyphicon glyphicon-book"></span>  
+          </div>
+          
+            <h1 style="text-align: center">{{ dashboard.cnt_book }}</h1>
+            <p class="card-text" style="text-align: center">Total No. of Books</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card" style="background-color: #0b7ec1cc;">
+          <div class="card-body">
+          <div class="visual">
+            <span class="glyphicon glyphicon-shopping-cart"></span>  
+          </div>
+            <h1 style="text-align: center">{{ dashboard.cnt_borrowed }}</h1>
+            <p class="card-text" style="text-align: center">No. of Borrowed Books</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card" style="background-color: #05841b;">
+          <div class="card-body">
+          <div class="visual">
+            <span class="glyphicon glyphicon-share-alt"></span>  
+          </div>
+            <h1 style="text-align: center">{{ dashboard.cnt_returned }}</h1>
+            <p class="card-text" style="text-align: center">No. of Returned Books</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
