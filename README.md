@@ -15,6 +15,8 @@ Clone/Download this repository on your server
 
 ### Running the System
 Type on your browser this link http://localhost[:port]/folder-name
+<br>Username : admin
+<br>Password : 12345
 
 ### Technology Used
 * AngularJS 1
