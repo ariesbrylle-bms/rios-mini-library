@@ -85,7 +85,13 @@ app.controller("book-information", function($scope, $http, $location, Notificati
        .withOption('paging', true)
        .withOption('searching', true)
        .withOption('info', true);
-  $scope.book = {};
+  $scope.book = {
+    'book_title' : '',
+    'book_author' : '',
+    'book_genre' : '',
+    'book_section' : '',
+    'book_id' : ''
+  };
   $scope.book_data = {};
 
   // function to clear form
@@ -101,6 +107,7 @@ app.controller("book-information", function($scope, $http, $location, Notificati
     $('#book_id').val('');
     $('#book_section').select2({setVal : ''});
   }
+
 
   // function to load data to the table
   $scope.loadTable = function(){
@@ -160,6 +167,8 @@ app.controller("book-information", function($scope, $http, $location, Notificati
            $scope.book.book_genre = response.data.book_data[0].genre;
            $scope.book.book_section = response.data.book_data[0].section;
            $scope.book.book_id = response.data.book_data[0].id;
+         
+
            var myarray = response.data.book_data[0].author.split(',');
            for(var i = 0; i < myarray.length; i++)
            {
